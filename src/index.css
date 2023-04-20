@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh", sans-serif;
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+.navlink::before {
+  content: "";
+  position: absolute;
+  left: -.5rem;
+  bottom: -45px;
+  width: 100%;
+  height: 4px;
+  background: hsl(26, 100%, 55%);
+  transition: width 0.4s cubic-bezier(0.74, 0.72, 0.27, 0.24);
+}
+.svg path {
+    stroke: #1D2026;
+    stroke-width: 3;
+    fill: none;
+    fill-rule: evenodd;
+  }
+button:hover .svg path{
+    stroke: hsl(26, 100%, 55%);
+    stroke-width: 3;
+    fill: none;
+    fill-rule: evenodd;
+}
+.svg-close path{
+    stroke: none;
+    fill:#f7f7f7;
+    fill-rule: evenodd;
+}
+ .svg-close path:hover{
+    fill: hsl(26, 100%, 55%);
+    fill-rule: evenodd;
+}
+li a{
+    font-size: 15px;
+    margin-right: 2rem;
+}
+li a:hover{
+    border-bottom: 4px solid hsl(26, 100%, 55%);
+    padding-bottom: 2.8rem;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+.lg\:w-1\/2{
+    width: 30% !important;
+}
+.box-content{
+    margin-left: 3rem;
+}
+.box-content h3{
+    letter-spacing: 1px;
+}
+.box-content h1{
+    font-size: 45px;
+}
+.btn{
+    cursor: pointer;
+}
+
+@media (max-width: 650px){
+    .lg\:w-1\/2{
+        width: 100% !important;
+    }
+    .gallery{
+        width: auto;
+    }
+    .responsive-nav{
+        background: linear-gradient(90deg, #f7f7f7 60%, #00000065 6%);
+        height: 100vh !important;
+        width: 100%;
+    }
+    li a:hover{
+        border-bottom: 2px solid hsl(26, 100%, 55%);
+        padding-bottom: 0rem;
+    }
+}
+
+
